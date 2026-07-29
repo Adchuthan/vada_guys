@@ -1,0 +1,116 @@
+.memories-page__title {
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--space-4);
+}
+
+.memories-page__desc {
+  color: var(--color-text-muted);
+  max-width: 36rem;
+  margin-bottom: var(--space-8);
+}
+
+.masonry {
+  columns: 2;
+  column-gap: var(--space-4);
+}
+
+.masonry__tile {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-bottom: var(--space-4);
+  break-inside: avoid;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.55), transparent 60%),
+    linear-gradient(135deg, #241008, #1a1a1a 60%, #0a0a0a);
+  overflow: hidden;
+  padding: var(--space-4);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.masonry__tile--tall {
+  aspect-ratio: 4 / 6.5;
+}
+
+.masonry__tile:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--color-accent);
+}
+
+.masonry__caption {
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-align: left;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(5, 5, 5, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__frame {
+  width: min(90vw, 560px);
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border-strong);
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox__image {
+  flex: 1;
+  background: linear-gradient(135deg, #241008, #1a1a1a 60%, #0a0a0a);
+}
+
+.lightbox__frame p {
+  padding: var(--space-4);
+  text-align: center;
+  background: var(--color-surface);
+  font-size: var(--fs-sm);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  color: var(--color-text);
+}
+
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+}
+
+.lightbox__nav--prev {
+  left: var(--space-5);
+}
+
+.lightbox__nav--next {
+  right: var(--space-5);
+}
+
+@media (min-width: 720px) {
+  .masonry {
+    columns: 3;
+  }
+}

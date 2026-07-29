@@ -1,0 +1,102 @@
+.wall-page__grid {
+  display: grid;
+  gap: var(--space-10);
+}
+
+.wall-page__title {
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--space-4);
+}
+
+.wall-page__desc {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+  max-width: 30rem;
+}
+
+.wall-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.wall-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.wall-form__field input,
+.wall-form__field textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text);
+  font-size: var(--fs-base);
+  resize: vertical;
+}
+
+.wall-form__field input:focus,
+.wall-form__field textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.wall-form__error {
+  color: #ff6b6b;
+  font-size: var(--fs-sm);
+}
+
+.wall-form .btn {
+  align-self: flex-start;
+}
+
+.wall-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-height: 640px;
+  overflow-y: auto;
+  padding-right: var(--space-2);
+}
+
+.wall-list__item {
+  display: flex;
+  gap: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.wall-list__avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  color: var(--color-accent-gold);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 178, 56, 0.25), rgba(10, 10, 10, 0.4));
+  border: 1px solid var(--color-border-strong);
+}
+
+.wall-list__item strong {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: var(--fs-sm);
+}
+
+.wall-list__item p {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+@media (min-width: 960px) {
+  .wall-page__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

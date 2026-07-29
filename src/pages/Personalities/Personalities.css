@@ -1,0 +1,74 @@
+.personalities-page__title {
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--space-4);
+}
+
+.personalities-page__desc {
+  color: var(--color-text-muted);
+  max-width: 36rem;
+  margin-bottom: var(--space-10);
+}
+
+.personalities-page__groups {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.personality-group {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.personality-group__header h2 {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  color: var(--color-accent);
+  margin-bottom: var(--space-1);
+}
+
+.personality-group__header p {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-5);
+}
+
+.personality-group__members {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.personality-group__members li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-surface-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.personality-group__initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  color: var(--color-accent-gold);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 178, 56, 0.25), rgba(10, 10, 10, 0.4));
+  border: 1px solid var(--color-border-strong);
+}
+
+.personality-group__members strong {
+  display: block;
+  font-size: var(--fs-sm);
+}
+
+.personality-group__members span {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+}

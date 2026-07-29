@@ -1,0 +1,189 @@
+.member-page__crumbs {
+  color: var(--color-text-faint);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-8);
+}
+
+.member-page__crumbs a:hover {
+  color: var(--color-accent);
+}
+
+.member-page__grid {
+  display: grid;
+  gap: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+
+.member-page__photo-col {
+  text-align: center;
+}
+
+.member-page__badge {
+  display: inline-block;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-accent);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-5);
+}
+
+.member-page__photo {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto var(--space-5);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: var(--fs-5xl);
+  color: var(--color-accent-gold);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 178, 56, 0.3), rgba(10, 10, 10, 0.5));
+  border: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.member-page__quote {
+  color: var(--color-text-muted);
+  font-style: italic;
+  max-width: 22rem;
+  margin-inline: auto;
+}
+
+.member-page__info h1 {
+  font-size: var(--fs-4xl);
+}
+
+.member-page__tag {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.member-page__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.member-page__socials {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.member-page__social-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.member-page__social-icon:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.member-page__panel {
+  margin-bottom: var(--space-6);
+}
+
+.member-page__panel h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.member-page__panel p {
+  color: var(--color-text-muted);
+}
+
+.member-page__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.member-page__pills li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 5px 14px;
+  font-size: var(--fs-sm);
+}
+
+.member-page__favorites {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.member-page__favorites div {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px dashed var(--color-border);
+  font-size: var(--fs-sm);
+}
+
+.member-page__favorites dt {
+  color: var(--color-text-faint);
+  text-transform: capitalize;
+}
+
+.member-page__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+}
+
+.member-page__nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.member-page__nav-link:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.member-page__nav-link--center {
+  background: var(--color-surface);
+}
+
+@media (min-width: 860px) {
+  .member-page__grid {
+    grid-template-columns: 320px 1fr;
+  }
+
+  .member-page__nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .member-page__nav-link {
+    flex: 1;
+  }
+}
